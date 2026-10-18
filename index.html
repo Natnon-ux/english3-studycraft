@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#293c2d">
+  <meta name="description" content="สรุป English 3 Units 3–4 ภาษาไทย พร้อมแฟลชการ์ดและข้อสอบฝึก 80 ข้อ มีเฉลยอธิบาย">
+  <title>StudyCraft · English 3</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill%3D%22%23293c2d%22%20d%3D%22M0%200h32v32H0z%22%2F%3E%3Cpath%20fill%3D%22%238cbd4f%22%20d%3D%22M3%203h26v9H3z%22%2F%3E%3Cpath%20fill%3D%22%23588d36%22%20d%3D%22M3%2010h26v5H3z%22%2F%3E%3Cpath%20fill%3D%22%2398663e%22%20d%3D%22M3%2015h26v14H3z%22%2F%3E%3Cpath%20fill%3D%22%23c18b53%22%20d%3D%22M6%2018h7v5H6zm14%205h5v4h-5z%22%2F%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="refresh.css">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="audio.css">
+  <link rel="stylesheet" href="pronunciation.css">
+  <link rel="stylesheet" href="matching.css">
+  <script src="content.js" defer></script>
+  <script src="review.js" defer></script>
+  <script src="question-translations.js" defer></script>
+  <script src="voices.js" defer></script>
+  <script src="thai-readings.js" defer></script>
+  <script src="matching.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="game.js" defer></script>
+  <script src="audio.js" defer></script>
+  <script src="pronunciation.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปเนื้อหา</a>
+<aside class="sidebar" aria-label="เมนูหลัก">
+  <a class="brand" href="#home"><span class="brand-icon" aria-hidden="true"></span><span>STUDYCRAFT<small>LI102003 · ENGLISH 3</small></span></a>
+  <div class="sidebar-label">INVENTORY / คลังความรู้</div>
+  <nav>
+    <a href="#home" data-nav="home"><span class="nav-icon">⌂</span>ภาพรวม<span class="nav-en">Overview</span></a>
+    <a href="#vocab" data-nav="vocab"><span class="nav-icon">Aa</span>คลังศัพท์<span class="nav-en">Vocabulary</span></a>
+    <a href="#match" data-nav="match"><span class="nav-icon">◆</span>จับคู่ศัพท์<span class="nav-en">Word Quest</span></a>
+    <a href="#grammar" data-nav="grammar"><span class="nav-icon">≋</span>ไวยากรณ์<span class="nav-en">Grammar</span></a>
+    <a href="#reading" data-nav="reading"><span class="nav-icon">▤</span>บทอ่าน<span class="nav-en">Reading</span></a>
+    <a href="#review" data-nav="review"><span class="nav-icon">✦</span>รีวิวเพิ่ม<span class="nav-en">Final Review</span></a>
+    <a href="#quiz" data-nav="quiz"><span class="nav-icon">✎</span>แบบทดสอบ<span class="nav-en">Practice</span></a>
+    <a href="#progress" data-nav="progress"><span class="nav-icon">◷</span>ผลการฝึก<span class="nav-en">My progress</span></a>
+  </nav>
+  <div class="sidebar-bottom"><div class="tiny-star">✦</div><b>A little progress,<br>every single day.</b><p>อ่านทีละเรื่อง ฝึกทีละข้อ<br>วันนี้เก่งกว่าเมื่อวานนิดหนึ่งก็พอ</p><span class="local-status"><i></i> พื้นที่เรียนส่วนตัว</span></div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><span>WORLD / <b id="breadcrumb">OVERVIEW</b></span><div class="topbar-tools"><span class="course-pill">UNIT 3 <i>+</i> UNIT 4 <span>FINAL 2569</span></span><button id="motion-toggle" class="motion-toggle" aria-pressed="false">Ⅱ พักตัวละคร</button><div class="sound-control"><button id="sound-toggle" class="sound-toggle" aria-pressed="false">♪ เสียงเกม</button><details id="sound-settings" class="sound-settings"><summary aria-label="ตั้งค่าความดังและดนตรี">⚙</summary><div class="sound-panel"><h2>เสียงในโลก StudyCraft</h2><label class="sound-volume-label" for="sound-volume">ความดัง <output id="sound-volume-value" for="sound-volume">30%</output></label><input id="sound-volume" type="range" min="0" max="100" step="1" value="30" aria-label="ความดังเสียง"><label class="sound-music-label"><input id="sound-music" type="checkbox"> ดนตรีคลอเบา ๆ</label><button id="sound-test" class="btn small">ลองเอฟเฟกต์ ✦</button><p id="sound-status" role="status">แตะเปิดเสียงเพื่อเริ่ม</p></div></details></div></div></header>
+  <main id="main" tabindex="-1"></main>
+  <footer>English 3 · Personal study companion <span>สรุปเพื่อทบทวนและข้อสอบแต่งใหม่ · ไม่ใช่ข้อสอบจริง</span></footer>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<dialog id="dialog"><h2 id="dialog-title"></h2><p id="dialog-body"></p><div class="actions"><button class="btn secondary" id="dialog-cancel">กลับไปทำต่อ</button><button class="btn" id="dialog-confirm">ยืนยัน</button></div></dialog>
+<noscript>กรุณาเปิด JavaScript ในเบราว์เซอร์เพื่อใช้สรุปและแบบทดสอบ</noscript>
+</body>
+</html>

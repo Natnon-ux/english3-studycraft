@@ -1,0 +1,18 @@
+.pronunciation-guide{display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:#e9f0d9;border:3px solid #789b54;box-shadow:inset 3px 3px #f7ffe9,4px 4px #3c542315;padding:18px 20px;margin:22px 0}
+.pronunciation-copy{flex:1;min-width:0}.pronunciation-copy h2{font-size:18px;line-height:1.6;margin:0 0 5px;color:#354b2c}
+.pronunciation-copy p{font-size:13px;line-height:1.8;color:#536943;margin:0;overflow-wrap:anywhere}
+.pronunciation-guide .btn{min-height:44px}.pronunciation-guide .btn:disabled{opacity:.45;cursor:default}
+#pronunciation-native{flex-basis:100%;min-width:0}#pronunciation-native:empty,#pronunciation-native:has(audio[hidden]){display:none}
+#pronunciation-player{width:100%;max-width:520px;height:44px;display:block}#pronunciation-player[hidden]{display:none}
+.word-listen{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 5px}
+.word-card .thai-reading{font:16px/1.9 Tahoma,Arial,sans-serif;color:#67542e;margin:7px 0 2px;overflow-wrap:anywhere}
+.thai-reading span{display:block;font-size:11px;line-height:1.6;font-weight:700;color:#76824e;margin-bottom:2px}
+.pronunciation-copy .pronunciation-hint{margin-top:5px;font-size:12px;color:#67744e}
+.pronounce-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:9px 12px;background:#e4edce;border:2px solid #819c5e;box-shadow:inset 2px 2px #f8ffe9,2px 2px #59763c33;color:#355127;font:600 13px/1.5 Tahoma,Arial,sans-serif;cursor:pointer}
+.pronounce-btn.slow{background:#f7efd7;border-color:#baa56c;color:#715c2d;box-shadow:inset 2px 2px #fffaf0,2px 2px #8b714333}
+.pronounce-btn:hover{filter:brightness(.96)}.pronounce-btn:active,.pronounce-btn.is-speaking{transform:translate(1px,1px);box-shadow:inset 2px 2px #314a241a;background:#c6dda5;border-color:#527637}
+.pronounce-btn:focus-visible{outline:3px solid #355127;outline-offset:3px}.pronounce-btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+.pronounce-btn.is-speaking svg{animation:voice-pulse .7s steps(2,end) infinite}
+@keyframes voice-pulse{50%{opacity:.35}}
+@media(max-width:700px){.pronunciation-guide{gap:12px;padding:16px;border-width:2px}.pronunciation-copy{flex-basis:100%}.pronunciation-copy h2{font-size:17px}.word-listen{gap:7px}.pronounce-btn{padding:9px 10px}}
+@media(prefers-reduced-motion:reduce){.pronounce-btn.is-speaking svg{animation:none}}
