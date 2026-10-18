@@ -2,7 +2,7 @@
 (() => {
  'use strict';
  const D=window.STUDY,key='studycraft-match-v1',levels={easy:{name:'Easy',pairs:4,delay:1200,hint:true},medium:{name:'Medium',pairs:6,delay:850,hint:false},hard:{name:'Hard',pairs:8,delay:650,hint:false}};
- const categories={all:'ทุกหมวด',Ability:'ความสามารถ',Sport:'กีฬา',Cause:'เหตุและผล',Difficulty:'ความยาก','Multi-word':'กริยาหลายคำ',Graph:'กราฟ',saved:'★ คำที่บันทึก'};
+ const categories={all:'ทุกหมวด',added:'ศัพท์เสริมเดิม',pdf:'✦ จากไฟล์เฉลยใหม่',Reading:'ศัพท์บทอ่าน',Rules:'หน้าที่ / การอนุญาต',Ability:'ความสามารถ',Sport:'กีฬา',Cause:'เหตุและผล',Difficulty:'ความยาก','Multi-word':'กริยาหลายคำ',Graph:'กราฟ',saved:'★ คำที่บันทึก'};
  const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const shuffled=list=>{const a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
  let round=null,prefs={level:'easy',category:'all'},records={},timer=null,locked=false;
@@ -11,7 +11,7 @@
  function save(){try{localStorage.setItem(key,JSON.stringify({round,prefs,records}));}catch{}}
  function say(text){const out=$('#match-status');if(out)out.textContent=text;}
  function pool(){let saved=[];try{saved=JSON.parse(localStorage.getItem('english3-final-v1'))?.saved||[];}catch{}
-  return D.vocab.map((v,id)=>({v,id})).filter(({v,id})=>prefs.category==='all'||prefs.category==='saved'&&saved.includes(id)||v[2]===prefs.category);
+  return D.vocab.map((v,id)=>({v,id})).filter(({v,id})=>prefs.category==='all'||prefs.category==='added'&&D.addedVocabIds?.includes(id)||prefs.category==='pdf'&&D.pdfVocabIds?.includes(id)||prefs.category==='saved'&&saved.includes(id)||v[2]===prefs.category);
  }
  function newRound(){
   clearTimeout(timer);locked=false;const entries=pool(),n=Math.min(levels[prefs.level].pairs,entries.length);
@@ -41,14 +41,14 @@
   if(round.open.length===1){save();paint();$('#match-round [data-match-card="'+index+'"]').focus({preventScroll:true});say('เลือกอีกใบเพื่อจับคู่');return;}
   round.moves++;const [a,b]=round.open.map(i=>round.cards[i]);
   if(a.id===b.id&&a.lang!==b.lang){
-   round.matched.push(a.id);round.open=[];
+   window.STUDY_WEAKNESS.recordWord(a.id,true,`match:${Date.now()}:${round.moves}:${a.id}`);round.matched.push(a.id);round.open=[];
    const done=round.matched.length===round.ids.length;
    if(done){const old=records[recordKey()];records[recordKey()]=Number.isInteger(old)?Math.min(old,round.moves):round.moves;}
    save();paint();say(done?'จับคู่ครบแล้ว! ทวนคำที่เก็บได้หรือเริ่มชุดใหม่ได้เลย':'ถูกคู่! '+D.vocab[a.id][0]+' = '+D.vocab[a.id][1]);
    document.dispatchEvent(new CustomEvent('study:sound',{detail:{type:done?'complete':'correct'}}));
    $('#match-round [data-match-card]:not(:disabled)')?.focus({preventScroll:true});
   }else{
-   locked=true;save();paint();say('ยังไม่ใช่คู่เดียวกัน ลองจำตำแหน่งแล้วเปิดใหม่');
+   for(const card of [a,b])window.STUDY_WEAKNESS.recordWord(card.id,false,`match:${Date.now()}:${round.moves}:${card.id}`);locked=true;save();paint();say('ยังไม่ใช่คู่เดียวกัน ลองจำตำแหน่งแล้วเปิดใหม่');
    document.dispatchEvent(new CustomEvent('study:sound',{detail:{type:'wrong'}}));
    const snapshot=round;
    timer=setTimeout(()=>{if(round!==snapshot)return;round.open=[];locked=false;save();paint();$('#match-round [data-match-card="'+index+'"]')?.focus({preventScroll:true});},levelDelay());

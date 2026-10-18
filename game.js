@@ -8,7 +8,9 @@
  const icons={
   home:svg('<path fill="#77b84d" d="M2 3h20v7H2z"/><path fill="#99663e" d="M2 10h20v12H2z"/><path fill="#c68b53" d="M4 12h4v4H4zm10 4h5v4h-5z"/><path fill="#b0de75" d="M2 3h20v2H2z"/>'),
   vocab:svg('<path fill="#4b2c1d" d="M2 6h20v15H2z"/><path fill="#b98040" d="M3 7h18v5H3zm0 7h18v6H3z"/><path fill="#e1b76a" d="M11 10h3v6h-3z"/><path fill="#f7dc9d" d="M11 10h3v2h-3z"/>'),
+  cards:svg('<path fill="#64462c" d="M3 5h15v17H3z"/><path fill="#cba255" d="M7 2h15v17H7z"/><path fill="#f6e7b7" d="M9 4h11v13H9z"/><path fill="#558e70" d="M11 7h7v2h-7zm0 4h7v2h-7z"/>'),
   match:svg('<path fill="#194e43" d="M9 1h6v3h4v4h4v7h-4v5h-4v3H9v-3H5v-5H1V8h4V4h4z"/><path fill="#4cc3ad" d="M9 4h6v3h4v8h-4v5H9v-5H5V7h4z"/><path fill="#c7fff1" d="M9 5h5v4H9z"/>'),
+  weak:svg('<path fill="#80662b" d="M4 3h16v4H4zM3 7h4v10H3zm14 0h4v10h-4zM7 17h10v4H7z"/><path fill="#efc758" d="M7 6h10v9H7zm3 9h4v4h-4z"/><path fill="#fff0a2" d="M8 7h3v5H8z"/>'),
   grammar:svg('<path fill="#513a26" d="M4 3h17v19H4z"/><path fill="#d0a568" d="M6 4h14v16H6z"/><path fill="#f6ebca" d="M8 5h12v14H8z"/><path fill="#9b7643" d="M10 8h8v2h-8zm0 4h8v2h-8z"/><path fill="#89b75d" d="M16 3h3v10l-2-2-1 2z"/>'),
   reading:svg('<path fill="#235f57" d="M2 6h9v16H2zm11 0h9v16h-9z"/><path fill="#f9eccc" d="M3 4h8v15H3zm10 0h8v15h-8z"/><path fill="#b0a47b" d="M5 7h4v2H5zm0 4h4v2H5zm10-4h4v2h-4zm0 4h4v2h-4z"/>'),
   review:svg('<path fill="#a464a5" d="M7 2h10v3h4v12h-4v4H7v-4H3V5h4z"/><path fill="#e0a9d2" d="M8 4h8v3h3v8h-3v4H8v-4H5V7h3z"/><path fill="#fff0b5" d="M11 6h2v4h4v3h-4v4h-2v-4H7v-3h4z"/>'),
