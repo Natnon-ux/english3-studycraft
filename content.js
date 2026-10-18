@@ -47,7 +47,7 @@ window.STUDY = {
     ['struggle','ดิ้นรน พยายามอย่างยากลำบาก','Difficulty','I struggle to understand the accent.','struggle to + V1 / struggle with + noun'],
     ['straightforward','ตรงไปตรงมา ไม่ซับซ้อน','Difficulty','The instructions are straightforward.','ตรงข้าม tricky / complicated'],
     ['awkward','ลำบากใจ ไม่สะดวก จัดการยาก','Difficulty','There was an awkward silence.','awkward situation / position'],
-    ['challenged','ถูกท้าทายความสามารถ','Difficulty','The task challenged my patience.','challenge (v./n.); challenging (adj.)'],
+    ['challenged','ถูกท้าทายความสามารถ','Difficulty','I felt challenged by the task.','feel challenged = รู้สึกถูกท้าทาย; challenging = ที่ท้าทายความสามารถ'],
     ['stretch','ผลักดันให้ใช้ความสามารถเต็มที่','Difficulty','This project will stretch your skills.','stretch someone / their abilities'],
     ['delicate','ละเอียดอ่อน ต้องระมัดระวัง','Difficulty','The surgeon performed a delicate operation.','delicate task / operation'],
     ['wake up','ตื่น / ปลุก','Multi-word','Please wake me up at seven.','wake someone up / wake up (ไม่รับกรรมก็ได้)'],
@@ -83,12 +83,12 @@ window.STUDY = {
     ['significant / significantly','มากหรือมีนัยสำคัญ / อย่างมาก','Graph','There was a significant rise. Sales rose significantly.','adj. + noun / verb + adv.'],
     ['gradual / gradually','ทีละน้อย / อย่างค่อยเป็นค่อยไป','Graph','The number increased gradually.','a gradual increase'],
     ['slight / slightly','เล็กน้อย / อย่างเล็กน้อย','Graph','There was a slight fall. Costs fell slightly.','slight + noun / verb + slightly'],
-    ['dramatic / dramatically','อย่างมากอย่างเห็นได้ชัด','Graph','There was a dramatic increase.','a dramatic increase / increase dramatically'],
+    ['dramatic / dramatically','มากและเห็นได้ชัด / อย่างมากและเห็นได้ชัด','Graph','There was a dramatic increase.','a dramatic increase / increase dramatically'],
     ['steady / steadily','สม่ำเสมอ / อย่างต่อเนื่องสม่ำเสมอ','Graph','Demand grew steadily.','steady growth']
   ],
   grammar: [
     {id:'multi',tag:'UNIT 3 · 01',title:'Multi-word verbs',lead:'ดูความหมายก่อน แล้วค่อยดูว่าแยกกรรมได้ไหม',formula:'verb + particle(s)',body:[
-      ['ไม่รับกรรม','wake up, stay up, take off (เครื่องบินขึ้น)','The plane took off at noon. → ไม่มีกรรมตามหลัง'],
+      ['ไม่รับกรรมในความหมายนี้','wake up (ตื่น), stay up (ไม่นอน), take off (เครื่องบินขึ้น)','The plane took off at noon. → ไม่มีกรรมตามหลัง'],
       ['รับกรรม แยกได้','pick up, throw away, figure out, make up','Pick up the bag. = Pick the bag up. แต่ถ้าเป็น it / them ต้องวางกลาง: Pick it up.'],
       ['รับกรรม แยกไม่ได้','look after, believe in, look into','She looks after him. ห้ามแยกเป็น looks him after.'],
       ['สามคำ แยกไม่ได้','look up to, run out of, come up with','We ran out of time. / I look up to her.']
@@ -212,7 +212,7 @@ add('grammar','Used to / would','Every summer when we were children, we ___ visi
 add('grammar','No longer / any more','She ___ lives here; she moved last month.','no longer',['any more','not any more','no more'],'no longer วางก่อนกริยาหลักในประโยคบอกเล่า');
 add('grammar','No longer / any more','I do not take that bus ___.','any more',['no longer','longer no','no more longer'],'any more อยู่ท้ายประโยคปฏิเสธ = ไม่ทำอีกแล้ว');
 add('grammar','Obligation','You ___ bring lunch. A free meal is provided, but you may bring your own.','do not have to',['must not','cannot','are not allowed to'],'ไม่จำเป็นต้องนำอาหารมา แต่จะนำมาก็ได้ = do not have to ไม่ใช่ข้อห้าม');
-add('grammar','Obligation','This door is marked “Do not enter”. You ___ open it.','must not',['do not have to','need not','are allowed to'],'must not = ห้าม สอดคล้องกับป้ายห้ามเข้า');
+add('grammar','Obligation','This door is marked “Do not open”. You ___ open it.','must not',['do not have to','need not','are allowed to'],'must not = ห้าม สอดคล้องกับป้ายห้ามเปิด');
 add('grammar','Obligation','We ___ work late yesterday to finish the project.','had to',['must','have to','must to'],'หน้าที่ในอดีต yesterday ใช้ had to + V1');
 add('grammar','Permission','Visitors ___ take photographs here. The sign says “Photography permitted”.','are allowed to',['are forced to','are made to','are supposed'],'are allowed to = ได้รับอนุญาต; forced / made หมายถึงถูกบังคับ');
 add('grammar','Make / let','My parents let me ___ the trip.','join',['to join','joining','joined'],'let + object + V1 ไม่มี to');
