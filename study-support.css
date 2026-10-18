@@ -26,3 +26,9 @@
 .weak-word-option:focus-visible,.weak-list>summary:focus-visible{outline:3px solid #608244;outline-offset:3px}
 @media(max-width:900px){.weak-grid{grid-template-columns:1fr}}
 @media(max-width:540px){.weak-banner{align-items:flex-start;flex-direction:column;padding:18px}.weak-banner h2{font-size:20px}.weak-overview{gap:8px}.weak-overview>div{padding:17px 7px}.weak-overview strong{font-size:30px}.weak-overview span{font-size:12px}.weak-word-options{grid-template-columns:1fr}.weak-word-round h2{font-size:28px}.weak-list li{flex-direction:column;gap:6px}.reading-evidence{padding:12px}.evidence-pair blockquote{font-size:15px}}
+/* New mock papers keep the block theme and fit small touch screens. */
+.exam-set-label{display:block;font-weight:700;margin:20px 0 8px;font-size:14px}
+.full-exam .exam-set-select{display:block;width:100%;max-width:100%;font-size:15px;min-height:48px;margin-bottom:8px}
+.exam-set-note{font-size:12px!important;line-height:1.8!important;margin:8px 0 20px!important}
+.mock-expansion{margin-bottom:24px}
+@media(max-width:600px){.full-exam .exam-set-select{font-size:14px}.exam-set-note{font-size:12px!important}}
